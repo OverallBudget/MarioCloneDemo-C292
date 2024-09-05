@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && rb2d.velocity.y == 0)
+        if (Input.GetButtonDown("Jump") && (rb2d.velocity.y >= -1 && rb2d.velocity.y <= 1))
         {
             rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
